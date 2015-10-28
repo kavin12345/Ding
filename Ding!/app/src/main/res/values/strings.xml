@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ding!</string>
+
+    <string name="play_button">PLAY</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_game_screen">GameScreen</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_circular_animation">CircularAnimation</string>
+    <string name="title_activity_game_play">GamePlay</string>
+    <string name="title_activity_lose_screen">LoseScreen</string>
+    <string name="lose">YOU LOSE</string>
+</resources>
