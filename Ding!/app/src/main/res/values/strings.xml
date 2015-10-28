@@ -9,5 +9,8 @@
     <string name="title_activity_circular_animation">CircularAnimation</string>
     <string name="title_activity_game_play">GamePlay</string>
     <string name="title_activity_lose_screen">LoseScreen</string>
-    <string name="lose">YOU LOSE</string>
+
+    <string name="score">Score:</string>
+    <string name="high_score">High Score:</string>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.goky.ding;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -8,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
+import android.preference.PreferenceManager;
 import android.view.Display;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -181,6 +183,7 @@ public class CircularAnimation extends SurfaceView implements Runnable {
 
         if (!((x1 <= circle_x && circle_x < x2) && (y1 <= circle_y && circle_y < y2))) {
             lose = true;
+            checkHighScore();
         } else {
             curr_score = curr_score + 1;
             lose = false;
@@ -257,6 +260,20 @@ public class CircularAnimation extends SurfaceView implements Runnable {
         paintText.setTextSize(150);
         paintText.setStyle(Paint.Style.FILL);
         canvas.drawText("" + curr_score, x + 270, y - 250, paintText);
+    }
+
+    private void checkHighScore() {
+        SharedPreferences sp = getContext().getSharedPreferences("ding", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        int highScore = sp.getInt("high_score", 0);
+
+        if (curr_score > highScore) {
+            editor.putInt("high_score", curr_score);
+            editor.commit();
+        }
+
+        editor.putInt("curr_score", curr_score);
+        editor.commit();
     }
 
 }

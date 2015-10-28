@@ -4,14 +4,76 @@
     android:layout_height="match_parent"
     tools:context="com.goky.ding.LoseScreen">
 
-    <TextView
-        android:text="@string/lose"
-        android:textSize="@dimen/large_text_size"
-        android:textColor="@color/standard_color"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin" >
-    </TextView>
+        android:layout_marginTop="24dp"
+        android:src="@drawable/score_screen_box"/>
+
+    <TextView
+        android:text="@string/score"
+        android:textColor="@color/standard_color"
+        android:textSize="@dimen/standard_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"/>
+
+    <TextView
+        android:id="@+id/curr_score"
+        android:textColor="@color/standard_color"
+        android:textSize="@dimen/standard_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"/>
+
+    <TextView
+        android:text="@string/high_score"
+        android:textColor="@color/standard_color"
+        android:textSize="@dimen/standard_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"/>
+
+    <TextView
+        android:id="@+id/high_score"
+        android:textColor="@color/standard_color"
+        android:textSize="@dimen/standard_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:src="@drawable/home"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToMainMenu"/>
+
+        <ImageButton
+            android:id="@+id/replay_button"
+            android:src="@drawable/restart"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="restartGame"/>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

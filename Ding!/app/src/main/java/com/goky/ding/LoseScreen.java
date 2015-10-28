@@ -1,18 +1,38 @@
 package com.goky.ding;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class LoseScreen extends Activity {
+
+    SharedPreferences sp;
+    int curr_score, high_score;
+    TextView scoreTextView, highScoreTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lose_screen);
+
+        sp = getSharedPreferences("ding", Context.MODE_PRIVATE);
+        curr_score = sp.getInt("curr_score", 0);
+        high_score = sp.getInt("high_score", 0);
+
+        scoreTextView = (TextView) findViewById(R.id.curr_score);
+        scoreTextView.setText("" + curr_score);
+
+        highScoreTextView = (TextView) findViewById(R.id.high_score);
+        highScoreTextView.setText("" + high_score);
     }
 
     @Override
@@ -44,5 +64,15 @@ public class LoseScreen extends Activity {
         startActivity(new Intent(this, MainMenu.class));
         finish();
 
+    }
+
+    public void goToMainMenu(View view) {
+        startActivity(new Intent(this, MainMenu.class));
+        finish();
+    }
+
+    public void restartGame(View view) {
+        startActivity(new Intent(this, GameScreen.class));
+        finish();
     }
 }
