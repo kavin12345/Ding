@@ -56,4 +56,15 @@ public class MainMenu extends Activity {
         startActivity(new Intent(this, HighScore.class));
         finish();
     }
+
+    public void goToHowToPlayMenu(View view) {
+        startActivity(new Intent(this, HowToPlayMenu.class));
+        finish();
+    }
+
+    public void goToInfoMenu(View view) {
+        startActivity(new Intent(this, InfoMenu.class));
+        finish();
+    }
+
 }

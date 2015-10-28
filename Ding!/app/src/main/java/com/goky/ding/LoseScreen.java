@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -11,12 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.lang.reflect.Type;
+
 
 public class LoseScreen extends Activity {
 
     SharedPreferences sp;
     int curr_score, high_score;
-    TextView scoreTextView, highScoreTextView;
+    TextView loseTextView, scoreTextView, score, highScoreTextView, highScore;
 
 
     @Override
@@ -24,15 +27,28 @@ public class LoseScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lose_screen);
 
+        Typeface feenaCasualFont = Typeface.createFromAsset(getAssets(), "fonts/feenacasual.ttf");
+
         sp = getSharedPreferences("ding", Context.MODE_PRIVATE);
         curr_score = sp.getInt("curr_score", 0);
         high_score = sp.getInt("high_score", 0);
 
-        scoreTextView = (TextView) findViewById(R.id.curr_score);
-        scoreTextView.setText("" + curr_score);
+        loseTextView = (TextView) findViewById(R.id.lose_text);
+        loseTextView.setTypeface(feenaCasualFont);
 
-        highScoreTextView = (TextView) findViewById(R.id.high_score);
-        highScoreTextView.setText("" + high_score);
+        scoreTextView = (TextView) findViewById(R.id.score_text);
+        scoreTextView.setTypeface(feenaCasualFont);
+
+        score = (TextView) findViewById(R.id.curr_score);
+        score.setText("" + curr_score);
+        score.setTypeface(feenaCasualFont);
+
+        highScoreTextView = (TextView) findViewById(R.id.high_score_text);
+        highScoreTextView.setTypeface(feenaCasualFont);
+
+        highScore = (TextView) findViewById(R.id.high_score);
+        highScore.setText("" + high_score);
+        highScore.setTypeface(feenaCasualFont);
     }
 
     @Override

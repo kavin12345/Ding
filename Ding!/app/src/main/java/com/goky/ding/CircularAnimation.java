@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.view.Display;
 import android.view.SurfaceHolder;
@@ -256,10 +257,12 @@ public class CircularAnimation extends SurfaceView implements Runnable {
 
     private void drawScore() {
         Paint paintText = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paintText.setColor(Color.BLUE);
+        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/feenacasual.ttf");
+        paintText.setColor(getContext().getResources().getColor(R.color.standard_color));
         paintText.setTextSize(150);
         paintText.setStyle(Paint.Style.FILL);
-        canvas.drawText("" + curr_score, x + 270, y - 250, paintText);
+        paintText.setTypeface(tf);
+        canvas.drawText("" + curr_score, x + 260, y - 250, paintText);
     }
 
     private void checkHighScore() {

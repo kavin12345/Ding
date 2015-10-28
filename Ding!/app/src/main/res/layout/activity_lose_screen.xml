@@ -4,35 +4,40 @@
     android:layout_height="match_parent"
     tools:context="com.goky.ding.LoseScreen">
 
-    <ImageView
+    <TextView
+        android:id="@+id/lose_text"
+        android:layout_marginTop="60dp"
+        android:text="@string/lose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/score_screen_box"/>
+        android:textColor="@color/standard_color"
+        android:textSize="@dimen/large_text_size"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
+        android:id="@+id/score_text"
         android:text="@string/score"
         android:textColor="@color/standard_color"
-        android:textSize="@dimen/standard_text_size"
+        android:textSize="@dimen/medium_text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"/>
+        android:layout_marginTop="140dp"/>
 
     <TextView
         android:id="@+id/curr_score"
         android:textColor="@color/standard_color"
-        android:textSize="@dimen/standard_text_size"
+        android:textSize="@dimen/medium_text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"/>
+        android:layout_marginTop="190dp"/>
 
     <TextView
+        android:id="@+id/high_score_text"
         android:text="@string/high_score"
         android:textColor="@color/standard_color"
-        android:textSize="@dimen/standard_text_size"
+        android:textSize="@dimen/medium_text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -41,11 +46,11 @@
     <TextView
         android:id="@+id/high_score"
         android:textColor="@color/standard_color"
-        android:textSize="@dimen/standard_text_size"
+        android:textSize="@dimen/medium_text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"/>
+        android:layout_marginTop="310dp"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"

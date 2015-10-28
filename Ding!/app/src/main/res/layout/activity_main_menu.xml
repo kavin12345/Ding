@@ -4,6 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <ImageButton
+        android:id="@+id/info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/info"
+        android:background="@android:color/transparent"
+        android:onClick="goToInfoMenu" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -32,5 +43,15 @@
         android:src="@drawable/trophy"
         android:background="@android:color/transparent"
         android:onClick="goToHighScoreMenu" />
+
+    <ImageButton
+        android:id="@+id/help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="444dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/question"
+        android:background="@android:color/transparent"
+        android:onClick="goToHowToPlayMenu" />
 
 </RelativeLayout>

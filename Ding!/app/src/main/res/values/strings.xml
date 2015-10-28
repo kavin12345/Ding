@@ -10,8 +10,13 @@
     <string name="title_activity_game_play">GamePlay</string>
     <string name="title_activity_lose_screen">LoseScreen</string>
 
+    <string name="lose">You Lose</string>
+    <string name="author">By Kevin Seo</string>
+    <string name="date">2015</string>
     <string name="score">Score:</string>
     <string name="high_score">High Score:</string>
     <string name="title_activity_high_score">HighScore</string>
+    <string name="title_activity_how_to_play_menu">HowToPlayMenu</string>
+    <string name="title_activity_info_menu">InfoMenu</string>
 
 </resources>

@@ -32,6 +32,14 @@
             android:name=".HighScore"
             android:label="@string/title_activity_high_score" >
         </activity>
+        <activity
+            android:name=".HowToPlayMenu"
+            android:label="@string/title_activity_how_to_play_menu" >
+        </activity>
+        <activity
+            android:name=".InfoMenu"
+            android:label="@string/title_activity_info_menu" >
+        </activity>
     </application>
 
 </manifest>
