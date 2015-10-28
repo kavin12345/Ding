@@ -12,5 +12,6 @@
 
     <string name="score">Score:</string>
     <string name="high_score">High Score:</string>
+    <string name="title_activity_high_score">HighScore</string>
 
 </resources>

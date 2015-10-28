@@ -3,18 +3,26 @@ package com.goky.ding;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Matrix;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class MainMenu extends Activity {
+
+    TextView gameTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        gameTitle = (TextView) findViewById(R.id.title);
+        Typeface feenaCasualText = Typeface.createFromAsset(getAssets(), "fonts/feenacasual.ttf");
+        gameTitle.setTypeface(feenaCasualText);
     }
 
     @Override
@@ -40,8 +48,12 @@ public class MainMenu extends Activity {
     }
 
     public void playGame(View view) {
-        Intent intent = new Intent(this, GameScreen.class);
-        startActivity(intent);
+        startActivity(new Intent(this, GameScreen.class));
+        finish();
+    }
+
+    public void goToHighScoreMenu(View view) {
+        startActivity(new Intent(this, HighScore.class));
         finish();
     }
 }

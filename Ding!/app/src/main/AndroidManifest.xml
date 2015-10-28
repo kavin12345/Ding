@@ -28,6 +28,10 @@
             android:name=".LoseScreen"
             android:label="@string/title_activity_lose_screen" >
         </activity>
+        <activity
+            android:name=".HighScore"
+            android:label="@string/title_activity_high_score" >
+        </activity>
     </application>
 
 </manifest>
